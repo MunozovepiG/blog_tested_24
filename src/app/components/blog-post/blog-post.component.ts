@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentfulService } from 'src/app/services/contentful.service';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import { Document } from '@contentful/rich-text-types';
 
 @Component({
   selector: 'app-blog-post',
@@ -12,6 +14,8 @@ export class BlogPostComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private contentfulService: ContentfulService) { }
 
+ 
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const postId = params['id'];
@@ -21,4 +25,12 @@ export class BlogPostComponent implements OnInit {
       );
     });
   }
+
+    // Convert rich text to HTML
+    public convertRichTextToHtml(richText: Document): string {
+      if (richText === undefined || richText === null || richText.nodeType !== 'document') {
+        return '<p>Error</p>';
+      }
+      return documentToHtmlString(richText);
+    }
 }
