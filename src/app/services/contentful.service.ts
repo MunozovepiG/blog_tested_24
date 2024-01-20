@@ -36,4 +36,16 @@ getBlogPosts(): Observable<any[]> {
       })
     );
   }
+
+  getAssets(): Observable<any[]> {
+    const url = `https://cdn.contentful.com/spaces/j1lug1a1cve1/assets?access_token=${this.accessToken}`;
+    return this.http.get<any>(url).pipe(
+      map(response => response.items),
+      tap(data => console.log('Assets:', data)), // Log the data
+      catchError(error => {
+        console.error('Error fetching assets:', error);
+        throw error;
+      })
+    );
+  }
 }
