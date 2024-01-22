@@ -1,9 +1,10 @@
-<!-- blog-list.component.html -->
-<!-- blog-list.component.html -->
 <div *ngFor="let post of blogPosts">
-    <p>Test</p>
-    <h2>{{ post.fields.title }}</h2>
-    <p>{{ post.fields.body }}</p>
-    <a *ngIf="post.sys.id" [routerLink]="['/blog', post.sys.id]">Read More</a>
-  </div>
-  
+  <p>Test</p>
+  <h2>{{ post.fields.title }}</h2>
+  <p>{{ post.fields.body }}</p>
+
+  <!-- Display Thumbnail Image -->
+  <img *ngIf="post.fields.thumbnailUrl" [src]="post.fields.thumbnailUrl" alt="{{ post.fields.title }} Thumbnail" />
+
+  <a *ngIf="post.sys.id" [routerLink]="['/blog', post.sys.id]">Read More</a>
+</div>
