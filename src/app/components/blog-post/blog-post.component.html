@@ -1,5 +1,7 @@
-<div>
+<div *ngIf="blogPost">
+  <!-- Display Thumbnail Image -->
+
     <h2>{{ blogPost.title }}</h2>
-    <div [innerHTML]="blogPost.article"></div>
+    <div [innerHtml]="convertRichTextToHtml(blogPost.article)"></div>
+    <a [routerLink]="['/blog']">Back to Blog</a>
   </div>
-  
