@@ -1,7 +1,8 @@
 <div *ngIf="blogPost">
   <!-- Display Thumbnail Image -->
+  <img *ngIf="thumbnailUrl" [src]="thumbnailUrl" alt="{{ blogPost.fields.title }} Thumbnail" />
 
-    <h2>{{ blogPost.title }}</h2>
-    <div [innerHtml]="convertRichTextToHtml(blogPost.article)"></div>
-    <a [routerLink]="['/blog']">Back to Blog</a>
-  </div>
+  <h2>{{ blogPost.fields.title }}</h2>
+  <div [innerHTML]="convertRichTextToHtml(blogPost.fields.article)"></div>
+  <a [routerLink]="['/blog']">Back to Blog</a>
+</div>

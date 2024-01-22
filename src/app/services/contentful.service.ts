@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class ContentfulService {
     const url = `${this.apiUrl}?content_type=blogPosts&access_token=${this.accessToken}`;
     return this.http.get<any>(url).pipe(
       map(response => response.items),
-      tap(data => console.log('Blog Posts:', data)), // Log the data
+      tap(data => console.log('Blog Posts:', data)),
       catchError(error => {
         console.error('Error fetching blog posts:', error);
         throw error;
@@ -28,7 +28,7 @@ export class ContentfulService {
   getBlogPostById(id: string): Observable<any> {
     const url = `${this.apiUrl}/${id}?access_token=${this.accessToken}`;
     return this.http.get<any>(url).pipe(
-      map(response => response.fields),
+      map(response => response),
       catchError(error => {
         console.error(`Error fetching blog post with ID ${id}:`, error);
         throw error;
@@ -43,6 +43,18 @@ export class ContentfulService {
       tap(data => console.log('Assets:', data)),
       catchError(error => {
         console.error('Error fetching assets:', error);
+        throw error;
+      })
+    );
+  }
+
+  getAssetById(assetId: string): Observable<any> {
+    const url = `${this.assetUrl}/${assetId}?access_token=${this.accessToken}`;
+    return this.http.get<any>(url).pipe(
+      map(response => response),
+      tap(data => console.log('Asset:', data)),
+      catchError(error => {
+        console.error('Error fetching asset:', error);
         throw error;
       })
     );

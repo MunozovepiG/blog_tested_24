@@ -4,7 +4,9 @@
   <p>{{ post.fields.body }}</p>
 
   <!-- Display Thumbnail Image -->
-  <img *ngIf="post.fields.thumbnailUrl" [src]="post.fields.thumbnailUrl" alt="{{ post.fields.title }} Thumbnail" />
+  <img *ngIf="post.fields.thumbnailUrl" [src]="post.fields.thumbnailUrl" alt="{{ post.fields.title }} Thumbnail"
+  width="300" height="300"
+  />
 
   <a *ngIf="post.sys.id" [routerLink]="['/blog', post.sys.id]">Read More</a>
 </div>
