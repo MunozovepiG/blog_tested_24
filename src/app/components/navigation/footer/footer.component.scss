@@ -1,0 +1,71 @@
+@use '../../../styles/general/index.scss' as *;
+
+.footer-Container{
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    flex-direction: column;
+}
+
+.footer-Section{
+    width: 1600px;
+    display: flex;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    background-color: $black;
+    width: calc(50%);
+    justify-content: start;
+    margin-left: 0px;
+    color: white;
+}
+
+
+.centred-div{
+    margin: 0%;
+    display: flex;
+    width: 100%;
+    background-color: $black;
+    justify-content: center;
+    color: white;
+}
+//the first column css and layout 
+
+
+@media screen and (max-width: $tablet ) {
+ .footer-Section{
+    width: calc(100% - 64px);
+    flex-direction: column;
+    
+ }
+
+ .column{
+    margin-left: 16px;
+    width: 100%;
+ }
+}
+
+@media screen and (min-width: $tablet )  and (max-width: $laptop){
+    .footer-Section{
+        width:  calc(100% - (64px + 64px));
+     }
+
+     .column{
+    margin-left: 16px;
+     }
+}
+
+@media screen and (min-width: $laptop )  and (max-width: $large-desktop){
+    .footer-Section{
+        width:  calc(100% - 32px);
+     }
+
+     .column{
+    margin-left: 0px;
+     }
+}

@@ -13,7 +13,8 @@ import { LegalComponent } from './pages/legal/legal.component';
 import { RoadmapComponent } from './pages/roadmap/roadmap.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
-import { FooterComponent } from './components/navigation/footer/footer.component'; // Import HttpClientModule
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import { SelectionDropdownComponent } from './components/reusable/selection-dropdown/selection-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { FooterComponent } from './components/navigation/footer/footer.component
     RoadmapComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SelectionDropdownComponent,
+    
   ],
   imports: [
     BrowserModule,

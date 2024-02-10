@@ -2,7 +2,7 @@
 
 .full-widthContainer{
     width: 100%;
-   // background-color: aqua;
+    //background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ width: 1600px;
 
 @media screen and (max-width: b.$tablet ) {
     .default-section-Container{
-width:  calc(100% - 64px);;
+width:  calc(100% - 64px);
 
 //background-color: pink;
     } 
@@ -23,7 +23,7 @@ width:  calc(100% - 64px);;
 
 @media screen and (min-width: b.$tablet )  and (max-width: b.$laptop){
     .default-section-Container{
-width:  calc(100% - (64px + 64px));;
+width:  calc(100% - (64px + 64px));
 
 //background-color: orange;
     } 
