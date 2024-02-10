@@ -1,0 +1,31 @@
+@use 'breakpoints.scss' as b;
+
+.full-widthContainer{
+    width: 100%;
+   // background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.default-section-Container{
+width: 1600px;
+//background-color: red;
+}
+
+@media screen and (max-width: b.$tablet ) {
+    .default-section-Container{
+width:  calc(100% - 64px);;
+
+//background-color: pink;
+    } 
+}
+
+@media screen and (min-width: b.$tablet )  and (max-width: b.$laptop){
+    .default-section-Container{
+width:  calc(100% - (64px + 64px));;
+
+//background-color: orange;
+    } 
+}
+

@@ -1,0 +1,102 @@
+<div class="full-widthContainer">
+    <div class="default-section-Container">
+       <span class="desktop-menu">
+<span class="linksContainer">
+    <span class="logo">
+    <img 
+    
+    src="assets/branding/logo_astute.png" alt="astute logo">
+<span class="M48-bold logo-text">
+    astute
+</span>
+  
+
+    </span>
+    <span class="links-Container">
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  class="link">Home</a>
+        <a routerLink="/about" routerLinkActive="active-link" class="link">About</a>
+        <a routerLink="/blog" routerLinkActive="active-link" class="link">Learn</a>
+        <a routerLink="/roadmap" routerLinkActive="active-link" class="link">Roadmap</a>
+        <a routerLink="/contact_us" routerLinkActive="active-link"  class="link">Contact us</a>
+    </span>
+</span>
+
+       </span>
+
+       <span class="mobile-menu">
+
+       
+  <span class="logo">
+            <img 
+            
+            src="assets/branding/logo_astute.png" alt="astute logo">
+        <span class="M48-bold logo-text">
+            astute
+        </span>
+          
+        
+            </span>
+
+            <button 
+            (click)="showMenu()"
+            class="button-close-Button"
+            *ngIf = close
+            >
+                <img 
+                class="close-icon"
+               
+                src="assets/branding/close.png" alt="">
+            </button>
+
+            <button 
+            (click)="showMenu()"
+            class="button-close-Button"
+            *ngIf = !close
+            >
+                <img 
+                class="close-icon"
+               
+                src="assets/branding/menu.png" alt="">
+            </button>
+      
+     
+      
+        
+
+
+       </span>
+
+       <span 
+       class="mobile-menu-links"
+       *ngIf="close">
+    
+    <span class="mobile-link-block">
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  class="link">Home</a>
+
+    </span>
+
+    <span class="mobile-link-block">
+        <a routerLink="/about" routerLinkActive="active-link" class="link">About</a>
+
+    </span>
+    <span class="mobile-link-block">
+        <a routerLink="/blog" routerLinkActive="active-link" class="link">Learn</a>
+
+    </span>
+
+    <span class="mobile-link-block">
+        <a routerLink="/roadmap" routerLinkActive="active-link" class="link">Roadmap</a>
+
+    </span>
+    <span class="mobile-link-block">
+        <a routerLink="/contact_us" routerLinkActive="active-link"  class="link">Contact us</a>
+
+    </span>
+
+    </span>
+    </div>
+</div>
+
+  
+
+

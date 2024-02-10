@@ -1,0 +1,108 @@
+@use '../../../styles/general/index.scss' as *;
+
+a{
+    text-decoration: none; 
+}
+
+.mobile-menu{
+display: none;
+justify-content: space-between;
+align-items: center;
+}
+
+.desktop-menu{
+ display: flex;   
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.linksContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   // background-color: orange;
+
+
+}
+
+.links-Container{
+   // background-color: yellow;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.link{
+    @include M18-bold;
+    margin-right:40px ;
+    color:$black;
+}
+
+.link:hover{
+    font-size: 20px;
+}
+
+.active-link{
+    @include M18-bold;
+    margin-right:40px ;
+    color:$primaryBlue;   
+}
+.logo-text{
+    margin-left:40px;
+}
+
+.close-icon{
+  //  margin-top: 24px;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+.mobile-menu-links{
+    display: flex;
+    width: 100%;
+  //  background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex-direction: column;
+}
+
+.mobile-link-block{
+  width: 164px;
+ // background-color: orange;
+  align-items: left;
+  justify-content: left;
+  display: flex;
+}
+
+.button-close-Button{
+    background-color: white;
+    display: flex;
+    border: none;
+    height: 40px;
+    align-items: start;
+    justify-content: center;
+    
+}
+
+@media screen  and (max-width: $tablet){
+ .desktop-menu{
+    display: none;
+ }
+
+ .mobile-menu{
+    display: flex;
+ }
+}
+
