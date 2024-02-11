@@ -27,7 +27,8 @@
 
 
 .centred-div{
-    margin: 0%;
+    margin-bottom: 24px;
+    margin-top: 24px;
     display: flex;
     width: 100%;
     background-color: $black;
@@ -35,7 +36,46 @@
     color: white;
 }
 //the first column css and layout 
+.image-column{
+    height: 108px;
+    width: 40px;
+    display: flex;
+    margin-top: 24px;
+}
 
+.play-button{
+    display: flex;
+    margin-top: 32px;
+    width: 130px;
+    height: 40px;
+    margin-bottom: 32px;
+}
+
+.links-header{
+    @include M24-bold;
+    color: white;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer-Links{
+    @include R18-semi_bold;
+    display: flex;
+    color: white;
+    margin-top: 16px;
+}
+
+.footer-Links:hover{
+font-size: 20px;
+}
+
+.links-column{
+    display: flex;
+    flex-direction:column ;
+}
 
 @media screen and (max-width: $tablet ) {
  .footer-Section{

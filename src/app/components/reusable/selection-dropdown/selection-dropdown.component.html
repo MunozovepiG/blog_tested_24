@@ -1,1 +1,6 @@
-<p>selection-dropdown works!</p>
+<!-- selection-dropdown.component.html -->
+
+<select [(ngModel)]="selectedCountry" name="selectedCountry">
+    <option *ngFor="let country of countries" [ngValue]="country">{{ country }}</option>
+  </select>
+  

@@ -15,6 +15,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { FooterComponent } from './components/navigation/footer/footer.component';
 import { SelectionDropdownComponent } from './components/reusable/selection-dropdown/selection-dropdown.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +33,16 @@ import { SelectionDropdownComponent } from './components/reusable/selection-drop
     HeaderComponent,
     FooterComponent,
     SelectionDropdownComponent,
+   
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
+    ReactiveFormsModule,
+    FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

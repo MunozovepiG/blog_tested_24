@@ -1,0 +1,39 @@
+@use '../../../styles/general/index.scss' as *;
+/* Style the select element */
+select {
+    width: 310px; /* Set the width */
+    height: 44px; /* Set the height */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-size: 16px; /* Set font size */
+    font-weight: 500; /* Set font weight to medium */
+    border: none; /* Remove default border */
+    border-bottom: 3px solid white; /* Add bottom border */
+    background-color: transparent; /* Make background transparent */
+    outline: none; /* Remove outline */
+    appearance: none; /* Remove default appearance */
+    padding-right: 30px; /* Add padding for arrow */
+    background-image: url(../../../../assets/branding/selection.png); /* Set custom arrow image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: right center; /* Position the image on the right */
+    background-size: 20px;
+    color:white /* Set size of the image */
+  }
+  
+  /* Style the options within the dropdown */
+  select option {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-size: 16px; /* Set font size */
+    font-weight: 500;
+    color:white /*  /* Set font weight to medium */
+  }
+  
+  /* Style for when the dropdown is focused */
+  select:focus {
+    border-bottom-color: blue; /* Change bottom border color when focused */
+  }
+  
+  @media screen and (max-width: $mobile-phone){
+    select{
+      width: 210px;
+    }
+  }
