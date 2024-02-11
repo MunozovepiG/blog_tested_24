@@ -3,7 +3,9 @@
   <li *ngFor="let policy of legalPolicies">
     <!-- Display policy type -->
     <h3>{{ policy.fields.type }}</h3>
-    <!-- Display legal content -->
-    <div [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+    <!-- Conditionally render legal content based on policy type -->
+    <div *ngIf="policy.fields.type === 'Privacy policy'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+    <div *ngIf="policy.fields.type === 'Terms'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+    <div *ngIf="policy.fields.type === 'Disclaimers'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
   </li>
 </ul>
