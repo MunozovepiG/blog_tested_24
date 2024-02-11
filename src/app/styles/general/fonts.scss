@@ -62,6 +62,11 @@ $rob:'Roboto', sans-serif;
     @include custom-font($rob,20px, 600, 28px);
   }
 
+  @mixin R20-semi_bold{
+    @include custom-font($rob,20px, 600, 28px);
+
+  }
+
   .R18-semi_bold{
     @include custom-font($rob,18px, 500, 24px);
   }

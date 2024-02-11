@@ -10,6 +10,9 @@ import { Document } from '@contentful/rich-text-types';
 })
 export class LegalComponent implements OnInit {
   legalPolicies: any[] = [];
+  terms: boolean = true;
+  privacy: boolean = false;
+  disclaimer: boolean = false;
 
   constructor(private contentfulService: ContentfulService) { }
 
@@ -35,5 +38,23 @@ export class LegalComponent implements OnInit {
         return '<p>Error</p>';
       }
       return documentToHtmlString(richText);
+    }
+
+    showTerms(){
+      this.terms = true;
+      this.privacy = false;
+      this.disclaimer = false;
+    }
+
+    showPrivacy(){
+      this.terms = false;
+      this.privacy = true;
+      this.disclaimer = false;
+    }
+
+    showDisclaimer(){
+      this.terms = false;
+      this.privacy = false;
+      this.disclaimer = true;
     }
 }

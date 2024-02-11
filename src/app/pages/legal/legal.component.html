@@ -1,11 +1,62 @@
-<h2>Legal Policies</h2>
-<ul>
-  <li *ngFor="let policy of legalPolicies">
-    <!-- Display policy type -->
-    <h3>{{ policy.fields.type }}</h3>
-    <!-- Conditionally render legal content based on policy type -->
-    <div *ngIf="policy.fields.type === 'Privacy policy'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
-    <div *ngIf="policy.fields.type === 'Terms'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
-    <div *ngIf="policy.fields.type === 'Disclaimers'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
-  </li>
-</ul>
+
+
+<div class="full-widthContainer">
+    <div class="default-section-Container">
+
+        <span class="legals-Layout">
+            <span class="sideBar">
+               <span class="M48-bold primaryOrange">
+                Legals
+               </span>
+
+               <span class="quick-Link" [class.activeButton]="terms">
+                <button (click)="showTerms()">
+                    Terms of use
+                </button>
+               </span>
+               <span class="quick-Link" [class.activeButton]="privacy">
+                <button (click)="showPrivacy()">
+                   Privacy
+                </button>
+               </span>
+               <span class="quick-Link" [class.activeButton]="disclaimer">
+                <button (click)="showDisclaimer()">
+                   Disclaimers
+                </button>
+               </span>
+            </span>
+
+            <!-- the legal content -->
+    
+<span class="legalContent">
+   
+    <span *ngFor="let policy of legalPolicies">
+        <!-- Display policy type -->
+      
+        <!-- Conditionally render legal content based on policy type -->
+        <span *ngIf="privacy">
+            <span *ngIf="policy.fields.type === 'Privacy policy'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
+
+        </span>
+
+        <span *ngIf="terms">
+            <span *ngIf="policy.fields.type === 'Terms'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
+
+        </span>
+
+        <span *ngIf="disclaimer">
+            <div *ngIf="policy.fields.type === 'Disclaimers'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+
+        </span>
+    </span>
+
+
+   
+</span>
+
+
+        </span>
+
+        
+    </div>
+</div>
