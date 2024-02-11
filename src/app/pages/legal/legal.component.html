@@ -1,1 +1,9 @@
-<p>legal works!</p>
+<h2>Legal Policies</h2>
+<ul>
+  <li *ngFor="let policy of legalPolicies">
+    <!-- Display policy type -->
+    <h3>{{ policy.fields.type }}</h3>
+    <!-- Display legal content -->
+    <div [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+  </li>
+</ul>

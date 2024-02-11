@@ -59,4 +59,16 @@ export class ContentfulService {
       })
     );
   }
+
+  getLegalPolicies(): Observable<any[]> {
+    const url = `${this.apiUrl}?content_type=legalPolicies&access_token=${this.accessToken}`;
+    return this.http.get<any>(url).pipe(
+      map(response => response.items),
+      tap(data => console.log('Legal Policies:', data)),
+      catchError(error => {
+        console.error('Error fetching legal policies:', error);
+        throw error;
+      })
+    );
+  }
 }
