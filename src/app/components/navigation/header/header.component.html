@@ -67,8 +67,9 @@
        </span>
 
        <span 
+       *ngIf=!close
        class="mobile-menu-links"
-       *ngIf="close">
+       >
     
     <span class="mobile-link-block">
         <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  class="link">Home</a>

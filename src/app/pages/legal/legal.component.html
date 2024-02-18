@@ -5,7 +5,7 @@
 
         <span class="legals-Layout">
             <span class="sideBar">
-               <span class="M48-bold primaryOrange">
+               <span class="M48-bold primaryOrange headingPadding">
                 Legals
                </span>
 
@@ -29,26 +29,29 @@
             <!-- the legal content -->
     
 <span class="legalContent">
-   
-    <span *ngFor="let policy of legalPolicies">
-        <!-- Display policy type -->
-      
-        <!-- Conditionally render legal content based on policy type -->
-        <span *ngIf="privacy">
-            <span *ngIf="policy.fields.type === 'Privacy policy'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
-
-        </span>
-
-        <span *ngIf="terms">
-            <span *ngIf="policy.fields.type === 'Terms'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
-
-        </span>
-
-        <span *ngIf="disclaimer">
-            <div *ngIf="policy.fields.type === 'Disclaimers'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
-
+    <span class="legalContent-container">
+        <span *ngFor="let policy of legalPolicies">
+            <!-- Display policy type -->
+          
+            <!-- Conditionally render legal content based on policy type -->
+            <span *ngIf="privacy">
+                <span *ngIf="policy.fields.type === 'Privacy policy'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
+    
+            </span>
+    
+            <span *ngIf="terms">
+                <span *ngIf="policy.fields.type === 'Terms'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></span>
+    
+            </span>
+    
+            <span *ngIf="disclaimer">
+                <div *ngIf="policy.fields.type === 'Disclaimers'" [innerHTML]="convertRichTextToHtml(policy.fields.legalContent)"></div>
+    
+            </span>
         </span>
     </span>
+   
+ 
 
 
    

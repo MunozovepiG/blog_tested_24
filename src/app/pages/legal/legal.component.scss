@@ -24,6 +24,8 @@ button{
     padding-top: 72px;
     display: flex;
     justify-content: space-between;
+   // padding-left: 16px;
+   // padding-right: 32px;
     //min-height: calc(100vh - 72px);
 }
 
@@ -37,9 +39,27 @@ button{
 .legalContent{
     display: flex;
     width: 751px ;
-   // background-color: red;
+   background-color: $neutral;
+   justify-content: center;
+   margin-right: 32px;
+   margin-top: 0px;
+
    // margin-bottom: 40px;
 }
+
+
+.legalContent-container{
+
+    display: flex;
+    width: 636px;
+
+}
+
+.headingPadding{
+    display: flex;
+    margin-bottom: 16px;
+}
+
 
 @media screen and (min-width:$mobile-phone) and (max-width: $tablet){
     .legals-Layout{
@@ -50,11 +70,29 @@ button{
   }
 
        .legalContent{
+        //display: flex;
+       // background-color: aqua;
         width: 100%;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 32px;
+        margin-right: 128px;
+       // padding-right: 24px;
+        justify-content: start;
+        margin-top: 32px;
+       // 
+       // min-height: 100%;
+
        }
+
+       .legalContent-container{
+
+        display: flex;
+        width: 80%;
+    //    background-color: red;
+    
+    }
 }
+
+
 
 
 @media screen and (max-width: $mobile-phone){
@@ -69,5 +107,16 @@ button{
         width: 85%;
         padding-left: 24px;
         padding-right: 24px;
+        margin-right: 32px;
+        margin-top: 24px;
+
        } 
+
+       .legalContent-container{
+
+        display: flex;
+        width: 95%;
+       // background-color: blue;
+    
+    }
 }

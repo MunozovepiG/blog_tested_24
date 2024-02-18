@@ -68,9 +68,9 @@ align-items: center;
 }
 
 .mobile-menu-links{
-    display: flex;
+    display: none;
     width: 100%;
-  //  background-color: antiquewhite;
+  // background-color: orange;
     justify-content: center;
     align-items: center;
     padding-top: 24px;
@@ -80,10 +80,10 @@ align-items: center;
 
 .mobile-link-block{
   width: 164px;
- // background-color: orange;
+  background-color: orange;
   align-items: left;
   justify-content: left;
-  display: flex;
+  display:none;
 }
 
 .button-close-Button{
@@ -105,8 +105,18 @@ align-items: center;
     display: flex;
  }
 
+
+
  .logo-text{
     margin-left:8px;
 }
+
+.mobile-link-block{
+    width: 164px;
+   // background-color: orange;
+    align-items: left;
+    justify-content: left;
+    display:flex;
+  }
 }
 
