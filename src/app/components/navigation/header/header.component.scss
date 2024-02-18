@@ -70,7 +70,7 @@ align-items: center;
 .mobile-menu-links{
     display: none;
     width: 100%;
-  // background-color: orange;
+  // background-color: red;
     justify-content: center;
     align-items: center;
     padding-top: 24px;
@@ -80,10 +80,10 @@ align-items: center;
 
 .mobile-link-block{
   width: 164px;
-  background-color: orange;
+ // background-color: orange;
   align-items: left;
   justify-content: left;
-  display:none;
+  display:flex;
 }
 
 .button-close-Button{
@@ -117,6 +117,10 @@ align-items: center;
     align-items: left;
     justify-content: left;
     display:flex;
+  }
+
+  .mobile-menu-links{
+    display:flex
   }
 }
 
