@@ -15,6 +15,16 @@ $rob:'Roboto', sans-serif;
   
 //the montserrat fonts 
 
+@mixin M80-heading{
+  @include custom-font($mons,80px, bold, 80px);
+
+}
+
+
+@mixin M46-bold{
+  @include custom-font($mons,46px, bold, 56px);
+
+}
   .M48-bold{
     @include custom-font($mons,48px, bold, 56px);
   }
@@ -22,6 +32,8 @@ $rob:'Roboto', sans-serif;
   .M32-bold{
     @include custom-font($mons,32px, bold, 40px);
   }
+
+
 
   .M24-bold{
     @include custom-font($mons,24px, bold, 40px);
@@ -53,9 +65,22 @@ $rob:'Roboto', sans-serif;
 
 
   //the roboto fonts
+  .R32-semi_bold{
+    @include custom-font($rob,32px, 600, 40px);
+  }
+
+  @mixin R32-semi_bold{
+    @include custom-font($rob,32px, 600, 40px);
+  }
+
 
   .R24-semi_bold{
     @include custom-font($rob,24px, 600, 32px);
+  }
+
+  @mixin R24-semi_bold{
+    @include custom-font($rob,24px, 600, 32px);
+
   }
 
   .R20-semi_bold{

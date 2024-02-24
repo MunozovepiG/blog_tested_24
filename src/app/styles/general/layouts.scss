@@ -1,4 +1,5 @@
 @use 'breakpoints.scss' as b;
+@use 'colors.scss' as c;
 
 .full-widthContainer{
     width: 100%;
@@ -13,19 +14,74 @@ width: 1600px;
 //background-color: red;
 }
 
-@media screen and (max-width: b.$tablet ) {
-    .default-section-Container{
-width:  calc(100% - 64px);
-
-//background-color: pink;
-    } 
+.section-Wrapper{
+    width: 100%;
+    display: flex;
+    background-color: c.$neutral;
+    justify-content: center;
+}
+.section{
+    width: 1440px;
+    height: 928px;
+   // background-color: pink;
+    width: 100%;
 }
 
+.divided-Section{
+    display: flex;
+    flex-direction: row;
+   // background-color: red;
+
+}
+
+.section-Column{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+   background-color: aquamarine;
+   height: 928px; //may change based on responsive screen
+}
+
+
+//generall spacing
+
+
+//laptop device
 @media screen and (min-width: b.$tablet )  and (max-width: b.$laptop){
     .default-section-Container{
 width:  calc(100% - (64px + 64px));
 
 //background-color: orange;
     } 
+
+    .divided-Section{
+        flex-direction: column;
+    }
+
+    .section-Column{
+        width: 100%;
+    }
 }
+
+
+//mobile device
+@media screen and (max-width: b.$tablet ) {
+    .default-section-Container{
+width:  calc(100% - 64px);
+
+//background-color: pink;
+    } 
+
+    .divided-Section{
+        flex-direction: column;
+    }
+
+    .section-Column{
+        width: 100%;
+    }
+
+
+   
+}
+
 
