@@ -1,5 +1,9 @@
 @use '../../styles/general/index.scss' as * ;
 
+.full-widthContainer{
+    display: flex;
+    flex-direction: column
+}
 
 .hero-Heading{
 @include M80-heading;
@@ -69,21 +73,34 @@ align-items: end;
     object-fit: contain; /* Ensures the whole image fits within the container without distortion */
 }
 
+.third-column-section{
+    height: 928px;
+    width: 100%;
+    display: flex;
+    background-color: $primaryBlue;
+}
+
+.primaryBlue-bkg{
+    width: 100%;
+    display: flex;
+    background-color: $primaryBlue;
+  
+}
 
 //this is tablet 
-@media screen and (min-width: $tablet) and (max-width: $laptop) {
+@media screen and (min-width: $mobile-phone) and (max-width: $laptop) {
    .section{
-    height: calc(572px + 496px);
+    height: calc(572px + 496px + 32px);
     //background-color: aqua;
    }
    
     .hero-contentHeight{
-        height: calc(602px + 32px);
+        height: calc(602px + 32px +32px);
        // background-color: yellow
     }  
 
     .hero-Heading{
-        margin-top: 16px;
+        margin-top: 48px;
         @include M80-heading;
         }
 
@@ -98,19 +115,19 @@ align-items: end;
 
 //responsiveness of the sections to be mna
         .section-Column{
-         //   background-color: orange;
-            height:536px;
+          // background-color: orange;
+            height:536px + 64px;
         }
 
         .hero-contentHeight{
-            height: 520px;
-          //  background-color: pink;
+            height: 584px;
+           // background-color: pink;
         }
 
 
         .mobile-Column{
-        //   background-color: purple;
-            height:496px ;
+         // background-color: purple;
+            height:640px ;
         }
         .homeImage{
             width: 643px; 
