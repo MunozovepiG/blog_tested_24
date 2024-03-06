@@ -195,7 +195,7 @@ height: 928px;
 .column-Main-Image{
     height: 808px;
     display: flex;
-    background-color: orange;
+   // background-color: orange;
     width: 578px;
     margin-top: 0px;
 }
@@ -249,6 +249,7 @@ height: 928px;
     align-items: center;
 }
 
+
 .accordin-text{
    width: 644px;
     display: flex;
@@ -282,19 +283,28 @@ a{
     margin-bottom: 32px;
 }
 .orange-Color{
-    color: $primaryOrange
+    color: $primaryOrange;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    //background-color: yellow;
 }
 
 .imagePadding{
   display: flex;
   width: calc(644px + 24px + 24px);
+  flex-direction: column;
+align-items: flex-end;
+  //background-color:blue;
+
 }
 
 .arrow-Instruction{
-    width: 417px;
-    height: 192px;
+    width: 436px; //417
+    height: 131px;
     display: flex;
-    background-color: red;
+   // background-color: red;
  justify-self: flex-end;
 }
 
@@ -304,6 +314,13 @@ a{
   //  background-color: pink;
    padding-bottom: 16px;
    align-items: flex-end;
+}
+
+.img-fit{
+    object-fit: contain;
+   // background-color: blue;
+    width: 436px; //417
+    height: 131px;
 }
 //this is tablet 
 @media screen and (min-width: $mobile-phone) and (max-width: $laptop) {
@@ -420,7 +437,7 @@ a{
 
      .custom-section{
         height: 804px;
-        background-color: yellow;
+      //  background-color: yellow;
      }
 
      .column-Main-Image{
@@ -428,6 +445,11 @@ a{
         margin-top: 32px;
     }
 
+    .imagePadding{
+        flex-direction: column;
+        align-items: flex-end;
+      //  background-color: orange;
+    }
 
 }
 
@@ -554,7 +576,7 @@ a{
 .column-Main-Image{
     height: 388px;
     display: flex;
-    background-color: orange;
+  //  background-color: orange;
     width: 284px;
 }
 
@@ -577,6 +599,80 @@ a{
 
 .section-Column-Adjustment{
     height: 460px;
+}
+
+
+.imagePadding{
+    flex-direction: column;
+    align-items: flex-end;
+   // background-color: orange;
+}
+.arrow-Instruction{
+    width: 368px;
+    height: 153px;
+    display: flex;
+    //background-color: red;
+ justify-self: flex-end;
+}
+
+
+.accordin-text{
+     @include custom-font($rob,16px, 400, 20px);
+ }
+
+ .divider{
+    width: 368px;
+}
+
+.imagePadding{
+
+    width: 368px;
+    align-items: flex-end;
+  }
+
+
+.accordin-text{
+    width: calc(368px - 16px);
+    padding-left: 8px;
+    padding-right: 8px;
+    
+ }
+
+ .accordin-Heading{
+  //  background-color: pink;
+    display: flex;
+    width: 368px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+ 
+ }
+ .accordin-Heading-text{
+   width: 248px;
+   //background-color: orange;
+
+   padding-left: 16px;
+ }
+.accordin{
+    width: 368px;
+}
+ .orange-Color{
+    width: 368px;
+    text-align: center;
+ }
+
+
+ .img-fit{
+  
+    width: 320px; //417
+    height: 96px;
+}
+
+.accrodin-des{
+   
+    padding-bottom: 24px;
+  
 }
     }
 

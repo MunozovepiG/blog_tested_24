@@ -5,12 +5,13 @@
     display: flex;
     
     background-color: $black;
+    width: 100%; // added 
 }
 
 .footer-Container{
     width: 100%;
     display: flex;
-  
+  //background-color: red;
     justify-content: center;
     align-items: center;
     //margin-top: 40px;
@@ -85,20 +86,23 @@ font-size: 20px;
     flex-direction:column ;
 }
 
+
+
+
 @media screen and (max-width: $tablet ) {
  .footer-Section{
     width: calc(100% - 64px);
     flex-direction: column;
-  //  background-color: yellow;
+   //background-color: yellow;
     
  }
 
 }
 
-@media screen and (min-width: $tablet )  and (max-width: $laptop){
+@media screen and (min-width: $tablet )  and (max-width: $large-desktop){
     .footer-Section{
         width:  calc(100% - (64px + 64px));
-        //background-color: yellow;
+       // background-color: green;
      }
 
      .column{
@@ -120,15 +124,7 @@ font-size: 20px;
       align-items: center;
       justify-content: center;
   }
-}
 
-@media screen and (min-width: $laptop )  and (max-width: $large-desktop){
-    .footer-Section{
-        width:  calc(100% - 32px);
-       // background-color: yellow;
-     }
 
-     .column{
-    margin-left: 0px;
-     }
+
 }

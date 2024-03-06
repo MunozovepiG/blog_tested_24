@@ -38,11 +38,14 @@ button{
 
 .legalContent{
     display: flex;
-    width: 751px ;
+    width: 100% ;
    background-color: $neutral;
    justify-content: center;
    margin-right: 32px;
    margin-top: 0px;
+   margin-left: 32px;
+   min-height: 100vh;
+   margin-bottom: 64px;
 
    // margin-bottom: 40px;
 }
@@ -51,7 +54,7 @@ button{
 .legalContent-container{
 
     display: flex;
-    width: 636px;
+    width: 85%;
 
 }
 
@@ -70,23 +73,14 @@ button{
   }
 
        .legalContent{
-        //display: flex;
-       // background-color: aqua;
-        width: 100%;
-        padding-left: 32px;
-        margin-right: 128px;
-       // padding-right: 24px;
-        justify-content: start;
-        margin-top: 32px;
-       // 
-       // min-height: 100%;
-
+        margin-right: 0px;
        }
 
        .legalContent-container{
 
         display: flex;
-        width: 80%;
+        width: calc(80% - 32px);
+        margin-right: 32px;
     //    background-color: red;
     
     }
@@ -104,19 +98,24 @@ button{
   }
 
        .legalContent{
-        width: 85%;
+        width: 90%;
         padding-left: 24px;
         padding-right: 24px;
         margin-right: 32px;
         margin-top: 24px;
-
        } 
 
        .legalContent-container{
-
         display: flex;
         width: 95%;
-       // background-color: blue;
-    
+       // background-color: blue; 
+       width: calc(80% - 16px);
+        margin-right: 16px; 
     }
+
+    .legalContent{
+        margin-right: 0px;
+        margin-left: 0px;
+       }
+
 }
