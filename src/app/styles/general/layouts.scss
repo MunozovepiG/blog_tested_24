@@ -2,29 +2,30 @@
 @use 'colors.scss' as c;
 
 .full-widthContainer{
-    width: 100%;
-    //background-color: aqua;
+  width: 100%; //different impact when % v vw
+  // background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .default-section-Container{
-width: 1600px;
+    width: 1600px;
 //background-color: red;
 }
 
 .section-Wrapper{
-    width: 100%;
+    //width: 100%;
     display: flex;
-    background-color: c.$neutral;
+  //  background-color: orange;
     justify-content: center;
 }
 .section{
-    width: 1440px;
+ //   width: 100%;// was 1440px
     height: 928px;
-   // background-color: pink;
-    width: 100%;
+   //background-color: pink;
+   justify-content: center; //added
+  //  width: 100%;
 }
 
 .divided-Section{
@@ -44,22 +45,28 @@ width: 1600px;
 
 
 //generall spacing
+.padding-24{
+    display: flex;
+    margin-bottom: 24px;
+}
 
-
-//laptop device
+// tablet 
 @media screen and (min-width: b.$tablet )  and (max-width: b.$laptop){
     .default-section-Container{
-width:  calc(100% - (64px + 64px));
+width:  calc(100vw - 64px -64px);
 
-//background-color: orange;
+//background-color: orange;//need to check no margin
     } 
 
     .divided-Section{
         flex-direction: column;
+       // background-color: green;
     }
 
     .section-Column{
-        width: 100%;
+        display: flex;
+        width:  calc(100vw - 300px);
+       // background-color: pink;
     }
 }
 
@@ -67,7 +74,7 @@ width:  calc(100% - (64px + 64px));
 //mobile device
 @media screen and (max-width: b.$tablet ) {
     .default-section-Container{
-width:  calc(100% - 64px);
+width:  calc(100vw - 64px);
 
 //background-color: pink;
     } 
@@ -77,9 +84,9 @@ width:  calc(100% - 64px);
     }
 
     .section-Column{
-        width: 100%;
+        width:  calc(100vw - 64px);
     }
-
+ 
 
    
 }

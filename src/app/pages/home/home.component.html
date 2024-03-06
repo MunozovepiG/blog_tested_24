@@ -1,5 +1,7 @@
-<div class="full-widthContainer">
+
  <!-- the hero section -->
+<div class="full-widthContainer primaryNeutral-bkg">
+
 
 
     <section class="section-Wrapper">
@@ -82,27 +84,262 @@
 
 
 </div>
-   <!-- how we do it section -->
-
-   <div class="full-widthContainer">
-<section class="section-Wrapper primaryBlue-bkg">
-
-    <div class="default-section-Container">
-        <div class="section">
-            hello
-        </div>
-    </div>
-</section>
-
-
-   </div>
+  
 
   
+  <!-- how we do it section -->
+
+  <div class="full-widthContainer primaryBlue-bkg long-Column">
+    <section class="section-Wrapper ">
+    
+        <div class="default-section-Container">
+            <div class="section">
+           <span class="subheading">
+            What we do different?
+           </span>
+           <span class="column-layout">
+             <!-- the mobile image -->
+            <span class="third-column">
+               <span class="card-heading">
+    
+                1. Identify your financial priority.
+               </span>
+    
+               <span class="card-description">
+                Overwhelmed with managing your personal finances? We'll help you determine whether you need to focus on your savings, debt, or investing.
+               </span>
+               <span class="card-Image">
+                <img src="../../../assets/homePage/01.png" alt="identify your financial priority" >
+    
+               </span>
+    
+               </span>
+     <!-- the mobile image -->
+               <span class="third-column">
+                <span class="card-heading">
+    
+                    2. Generate a customized plan.
+                   </span>
+    
+                   <span class="card-description">
+                    Unsure how much to save, pay off toward your debt, or invest? We'll calculate the amounts you need to achieve your goals.
+                   </span>
+                   <span class="card-Image">
+                    <img src="../../../assets/homePage/02.png" alt="identify your financial priority">
+        
+                   </span>
+    
+               </span>
+                <!-- the mobile image -->
+               <span class="third-column">
+                <span class="card-heading">
+    
+                   3. Adapt to your financial needs.
+                   </span>
+                   <span class="card-description">
+                    We regularly adjust your financial plans to complement your changing financial needs and keep you informed of your progress.
+                   </span>
+    
+                   <span class="card-description">
+    
+                   </span>
+                   <span class="card-Image">
+                    <img src="../../../assets/homePage/04.png" alt="identify your financial priority" >
+        
+                   </span>
+    
+               </span>
+           </span>
+    
+        
+            </div>
+        </div>
+    </section>
+    
+    
+       </div>
+
  
-    <!-- how we do it section -->
- 
-    <span>
-     mission statement
-    </span>
+ <!-- the mission section -->
+ <div class="full-widthContainer primaryWhite-bkg">
+
+
+
+    <section class="section-Wrapper">
+
+        <div class="default-section-Container">
+        
+         
+          
+            <div class="section custom-Section-Height ">
+         <span class="divided-Section">
+         
+             <span class="section-Column centre-Alignment custom-section section-Column-Adjustment">
+
+               <span class="main-Alignment">
+                <span class="column-Main-Image">
+                    to be inserted
+                </span>
+               </span>
+          
+
+
+
+             </span>
+         
+              <!-- the description -->
+
+             
+             <span class="section-Column  centre-Alignment custom-section section-Column-Adjustment">
+      <span class="main-Alignment">
+        <span class="main-Column-Text">
+            <span class="heading M40-bold padding-24">
+                Rebalancing capitalism
+            </span>
+
+            <span class="main-description">
+                Nepotism, inequality gaps, the numbing reality of the 9 to 5 grind—sometimes it feels like the promises of capitalism are nothing but a scam, doesn't it?
+            </span>
+            <span class="main-description">
+                That's where we step in. At Astute, we address the root cause of the wealth gap: the imbalance in financial astuteness.
+            </span>
+
+            <span class="main-description">
+                We've developed tools that simplify navigating the capitalist landscape, enabling you to secure substantial returns and claim your fair share of the pie.
+            </span>
+        </span>
+      </span>
+             
+             </span>
+         </span>
+         
+         
+            </div>
+         </div>
+         
+    </section>
+
  
 
+
+
+
+</div>
+  
+ <!-- the mission section -->
+<div class="full-widthContainer primaryNeutral-bkg">
+<div class="section last-section">
+   <span class="M32-bold padding-32 orange-Color">
+    Have a question about astute?
+   </span>
+ <!-- a1 -->
+    <span class="accordin">
+        <span class="accordin-Heading">
+            <span class="">Is astute free?</span>
+          <button
+          *ngIf = !question_one
+          class="accordin_button"
+          (click)="showQuestionOne()">+</button>
+
+          <button
+          *ngIf = question_one
+          class="accordin_button"
+          (click)="showQuestionOne()">-</button>
+        </span>
+
+        <span 
+        *ngIf = question_one
+        class="accrodin-des">
+        <span class="accordin-text">   Astute is priced at a once off $2.99 for the first 10,000 users. After this, our further users will be charged a monthly subscription of $2.99.</span>
+     </span>
+    </span>
+<span class="divider"></span>
+
+ <!-- a2 -->
+    <span class="accordin">
+        <span class="accordin-Heading">
+            <span class="">Will astute be available on ios?</span>
+            <button
+            *ngIf = !question_two
+            class="accordin_button"
+            (click)="showQuestionTwo()">+</button>
+  
+            <button
+            *ngIf = question_two
+            class="accordin_button"
+            (click)="showQuestionTwo()">-</button>
+        </span>
+
+        <span 
+        *ngIf = question_two
+        class="accrodin-des"> 
+        <span class="accordin-text">
+            The iOS version will become accessible starting June 1st, maintaining the same subscription framework.
+        </span>
+      </span>
+    </span>
+    <span class="divider"></span>
+     <!-- a3 -->
+     <span class="accordin">
+        <span class="accordin-Heading">
+            <span class="">How is my data used?</span>
+            <button
+            *ngIf = !question_three
+            class="accordin_button"
+            (click)="showQuestionThree()">+</button>
+  
+            <button
+            *ngIf = question_three
+            class="accordin_button"
+            (click)="showQuestionThree()">-</button>
+        </span>
+
+        <span 
+        *ngIf = question_three
+        class="accrodin-des"> 
+        <span class="accordin-text">
+            Kindly be informed that your data remains confidential and is not shared with third parties. It is solely utilized to tailor your experience according to your preferences and requirements.        </span>
+      </span>
+    </span>
+    <span class="divider"></span>
+
+       <!-- a4 --> <!-- wrapping for the image --> 
+<span class="imagePadding">
+    <span class="accordin">
+        <span class="accordin-Heading">
+            <span class="">How can I be involved?</span>
+            <button
+            *ngIf = !question_four
+            class="accordin_button"
+            (click)="showQuestionFour()">+</button>
+  
+            <button
+            *ngIf = question_four
+            class="accordin_button"
+            (click)="showQuestionFour()">-</button>
+        </span>
+        <span  *ngIf = !question_four class="divider"></span>
+
+        <span 
+        *ngIf = question_four
+        class="accrodin-des"> 
+        <span class="acrodinColum">
+            <span class="accordin-text">
+                We value your feedback and encourage you to get in touch with us. Our contact form can be found on the 'About Us' or 'Contact Us' page. Don't hesitate to reach out.           
+            </span>  
+        </span>
+      
+        
+      </span>
+    </span>
+   
+
+
+    <span class="arrow-Container">
+        <span class="arrow-Instruction">t</span>
+    </span>
+  
+</span>
+
+</div>
+</div>

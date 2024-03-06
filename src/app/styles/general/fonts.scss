@@ -29,6 +29,10 @@ $rob:'Roboto', sans-serif;
     @include custom-font($mons,48px, bold, 56px);
   }
 
+  .M40-bold{
+    @include custom-font($mons,40px, bold, 48px);
+  }
+
   .M32-bold{
     @include custom-font($mons,32px, bold, 40px);
   }

@@ -2,7 +2,9 @@
 
 .full-widthContainer{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    width:100%;// was 110vw
+    //background-color: orange;
 }
 
 .hero-Heading{
@@ -11,6 +13,8 @@ color: $primaryBlue;
 display: flex;
 margin-top: 98px;
 margin-bottom: 0px;
+//width: cal(100vw- 32px);
+//background-color: black;
 }
 
 .padding-40{
@@ -65,43 +69,274 @@ align-items: end;
    height: 496px;
    display: flex;
    overflow: hidden;
+ ////  background-color: black;
 }
 
 .homeImage img {
     width: 100%;
     height: 100%;
+ 
     object-fit: contain; /* Ensures the whole image fits within the container without distortion */
 }
 
 .third-column-section{
     height: 928px;
-    width: 100%;
+   // width: 100%;
     display: flex;
     background-color: $primaryBlue;
 }
 
 .primaryBlue-bkg{
-    width: 100%;
+
     display: flex;
     background-color: $primaryBlue;
+    height: 100%;
+   // align-items: center;
   
 }
 
+.primaryNeutral-bkg{
+
+    display: flex;
+    background-color: $neutral;
+    height: 100%;
+   // align-items: center;
+  
+}
+
+
+.primaryWhite-bkg{
+
+    display: flex;
+    background-color: $white;
+    height: 100%;
+   // align-items: center;
+  
+}
+//for the how we do it section 
+
+.column-layout{
+   // width: 100%;
+    display: flex;
+   // background-color: yellow;
+    justify-content: space-between;
+}
+
+.third-column{
+    width: 420px;
+    height: calc(630px + 40px + 32px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.subheading{
+    @include custom-font($mons,40px, bold, 48px);
+    color: $white; 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 72px;
+    text-align: center
+}
+
+.card-heading{
+    @include custom-font($mons,24px, bold, 24px);
+    color: $white;
+    display: flex;
+    color:$white;
+    margin-bottom:16px ;
+    text-align: center;
+}
+
+.card-description{
+    @include custom-font($rob,18px, 500, 24px);
+    color: $white;
+    text-align: center;
+
+}
+
+.card-Image {
+    width: 360px;
+    height:630px;
+    display: flex; 
+    flex-direction: column;
+   // background-color: green;
+    margin-top: 40px;
+    overflow: hidden;
+ }
+ 
+ .img-card {
+    width: 100%;
+   // height:100%;
+  display: flex;
+     object-fit: contain;
+ }
+ 
+.long-Column{
+//increase the height for other breakpoints
+height: 928px;
+}
+
+.centre-Alignment{
+    display: flex;
+    justify-content: center;
+}
+
+.main-Alignment{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.column-Main-Image{
+    height: 808px;
+    display: flex;
+    background-color: orange;
+    width: 578px;
+    margin-top: 0px;
+}
+
+.main-Column-Text{
+    width: 534px;
+    height: 508px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-description{
+    display: flex;
+    @include custom-font($rob,24px, 400px, 32px);
+    margin-bottom: 24px;
+}
+
+.last-section{
+    height: 928px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.accordin-Heading{
+    height: 80px;
+    width: 644px;
+    display: flex;
+    background-color: $white;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divider{
+    width:calc(644px + 24px + 24px);
+    height: 3px;
+    display: flex;
+    background-color: $primaryOrange;
+}
+
+.accrodin-des{
+    display: flex;
+    padding-top: 0px;;
+    padding-bottom: 16px;
+   background-color: $white;
+    width: 100%;
+    align-items: center;
+}
+
+.accordin-text{
+   width: 644px;
+    display: flex;
+   
+    padding-left: 24px;
+    color: $black;
+    @include custom-font($rob,18px, 400, 24px);
+}
+
+.accordin-Heading{
+    @include custom-font($rob,24px, 600, 32px);
+color: $black;
+
+}
+
+.accordin_button{
+    background-color: white;
+    border: none;
+    font-size: 28px;
+    font-weight: 500;
+
+}
+
+a{
+ text-align: justify;
+ width: auto;
+}
+
+.padding-32{
+    display: flex;
+    margin-bottom: 32px;
+}
+.orange-Color{
+    color: $primaryOrange
+}
+
+.imagePadding{
+  display: flex;
+  width: calc(644px + 24px + 24px);
+}
+
+.arrow-Instruction{
+    width: 417px;
+    height: 192px;
+    display: flex;
+    background-color: red;
+ justify-self: flex-end;
+}
+
+.acrodinColum{
+    display: flex;
+    flex-direction: column;
+  //  background-color: pink;
+   padding-bottom: 16px;
+   align-items: flex-end;
+}
 //this is tablet 
 @media screen and (min-width: $mobile-phone) and (max-width: $laptop) {
-   .section{
+  .full-widthContainer{
+    display: flex;
+    width: 100%;
+    margin-right: 0px;
+  }
+  
+    .section{
     height: calc(572px + 496px + 32px);
     //background-color: aqua;
    }
    
     .hero-contentHeight{
         height: calc(602px + 32px +32px);
+        width: 708px;
        // background-color: yellow
     }  
 
     .hero-Heading{
         margin-top: 48px;
         @include M80-heading;
+        width: 708px;
+        }
+
+        .padding-40{
+            display: flex;
+           // background-color: orange;
+        }
+        .description{
+            display: flex;
+          //  background-color: red;
         }
 
         .image-Container{ 
@@ -139,17 +374,71 @@ align-items: end;
          .homeImage img {
              width: 100%;
              height: 100%;
-             object-fit: contain; /* Ensures the whole image fits within the container without distortion */
+             object-fit: cover; /* Ensures the whole image fits within the container without distortion */
          }
          
+.column-layout{
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+   // background-color: white;
+}
+
+.long-Column{
+    //increase the height for other breakpoints
+
+    height:2318px ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   // background-color: orange;
+    }
+
+    .subheading{
+    
+        margin-top: 24px;
+        //background-color: pink;
+       
+    }
+
+    .card-Image {
+      
+        margin-top: 16px;
+        margin-bottom: 32px;
+ 
+     }
+ 
+     .third-column{
+        width: 420px;
+        //background-color: red;
+     }
+
+     .custom-Section-Height{
+       // background-color: red;
+        height: calc(804px + 804px);
+     }
+
+     .custom-section{
+        height: 804px;
+        background-color: yellow;
+     }
+
+     .column-Main-Image{
+        display: flex;
+        margin-top: 32px;
+    }
+
+
 }
 
 //this is mobile 
 @media screen and (max-width: $mobile-phone) {
 
     .section{
-      //  background-color: aqua;
-        height: calc(664px - 64px + 220px);
+       //background-color: aqua;
+        height: 940px;
+        justify-content: center;
+        align-items: flex-start;
     }
     .hero-contentHeight{
         height: calc(602px + 32px);
@@ -157,7 +446,7 @@ align-items: end;
     }
 
     .hero-Heading{
-        margin-top: 64px;
+        margin-top: 32px;
         @include M46-bold;
         }
 
@@ -183,7 +472,9 @@ align-items: end;
         
         .section-Column{
         //    background-color: red;
-            height:calc(664px - 64px);
+        width: calc(100% - 32px);
+            height:calc(664px);
+            
           }
 
           .hero-contentHeight{
@@ -198,14 +489,16 @@ align-items: end;
           }
 
           .homeImage{
-            width:254.60px;
-            height: 196px;
+            width:100%;
+            height: 262px;
           }
 
           .small-section{
             display: flex;
-            height: 220px;
-           justify-content: flex-start;
+            height: 270px;
+            width:100%;
+           justify-content: flex-end;
+           //background-color: red;
           }
 
           .mobile-Column{
@@ -213,7 +506,77 @@ align-items: end;
             height:220px ;
             display: flex;
             align-items: flex-end;
+          //  background-color: aqua;
         }
 
+
+        .long-Column{
+            //increase the height for other breakpoints
+            height: 2200px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            }
+
+            .column-layout{
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+               // background-color: white;
+            }
+
+.card-heading{
+    @include custom-font($mons,20px, bold, 24px);
+}
+
+.third-column{
+    display: flex;
+ //background-color: orange;
+    width: 320px;
+    height: 622px;
+}
+
+
+            .card-description{
+                @include custom-font($rob,16px, 500, 24px);
+              
+            
+            }
+
+            .card-Image{
+                height: 480px;
+                width: 256px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+
+
+.column-Main-Image{
+    height: 388px;
+    display: flex;
+    background-color: orange;
+    width: 284px;
+}
+
+.main-description{
+    display: flex;
+    @include custom-font($rob,18px, 400px, 24px);
+    margin-bottom: 16px;
+}
+
+.M40-bold{
+    @include custom-font($rob,32px, 600, 40px);
+}
+
+
+.padding-24{
+    margin-bottom: 16px;
+}
+
+
+
+.section-Column-Adjustment{
+    height: 460px;
+}
     }
 

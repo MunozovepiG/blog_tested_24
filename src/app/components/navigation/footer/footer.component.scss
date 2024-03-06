@@ -1,9 +1,16 @@
 @use '../../../styles/general/index.scss' as *;
 
-.footer-Container{
-    width: 100vw;
+
+.background-black{
     display: flex;
-    background-color: black;
+    
+    background-color: $black;
+}
+
+.footer-Container{
+    width: 100%;
+    display: flex;
+  
     justify-content: center;
     align-items: center;
     //margin-top: 40px;
@@ -19,7 +26,7 @@
 
 .column{
     display: flex;
-    background-color: $black;
+   // background-color: red;
     width: calc(50%);
     justify-content: start;
     margin-left: 0px;
@@ -82,28 +89,43 @@ font-size: 20px;
  .footer-Section{
     width: calc(100% - 64px);
     flex-direction: column;
+  //  background-color: yellow;
     
  }
 
- .column{
-    margin-left: 16px;
-    width: 100%;
- }
 }
 
 @media screen and (min-width: $tablet )  and (max-width: $laptop){
     .footer-Section{
         width:  calc(100% - (64px + 64px));
+        //background-color: yellow;
      }
 
      .column{
-    margin-left: 16px;
+    //margin-left: 16px;
      }
+
+
+ .column{
+    margin-left: 0px;
+   // background-color: red;
+    margin-right: 64px; //amended
+      width: 400px;
+   }
+  
+   .background-black{
+      display: flex;
+      
+   //   background-color: blue;
+      align-items: center;
+      justify-content: center;
+  }
 }
 
 @media screen and (min-width: $laptop )  and (max-width: $large-desktop){
     .footer-Section{
         width:  calc(100% - 32px);
+       // background-color: yellow;
      }
 
      .column{
